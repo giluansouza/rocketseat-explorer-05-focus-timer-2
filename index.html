@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Temporizador estilo pomodoro">
+    <title>Focus Timer - Pomodoro</title>
+
+    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-svg">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="./style.css">
+    <script type="module" src="./src/main.js" defer></script>
+</head>
+<body>
+    <div id="app">
+        <!-- <button id="toggle-mode">
+            <span class="sr-only">Ativar light mode</span>
+            <i class="ph-bold ph-sun"></i>
+            <i class="ph-bold ph-moon"></i>
+        </button> -->
+
+        <div class="panel-timer">
+            <section id="timer" class="flex">
+                <span id="minutes">25</span>
+                <span>:</span>
+                <span id="seconds">00</span>
+            </section>
+
+            <section id="controls" class="flex">
+                <button 
+                data-action="toggleRunning"
+                class="ph ph-play-circle">
+                    <span class="sr-only">Iniciar contador</span>
+                </button>
+                <button 
+                data-action="reset"
+                class="ph ph-stop-circle">
+                    <span class="sr-only">Parar contador</span>
+                </button>
+                <button
+                data-action="setPlus"
+                class="ph ph-plus-circle">
+                    <span class="sr-only">Aumentar contador em 5 minutos</span>
+                </button>
+                <button
+                data-action="setMinus"
+                class="ph ph-minus-circle">
+                    <span class="sr-only">Diminuir contador em 5 minutos</span>
+                </button>
+            </section>
+        </div>
+
+        <div id="controlsMusic" class="options-buttons">
+            <button
+            data-action="musicFloresta"
+            class="ph ph-tree">
+                <span class="sr-only">Som de floresta</span>
+            </button>
+            <button
+            data-action="musicChuva"
+            class="ph ph-cloud-snow">
+                <span class="sr-only">Som de chuva</span>
+            </button>
+            <button
+            data-action="musicCafeteria"
+            class="ph ph-storefront">
+                <span class="sr-only">Som de cafeteria</span>
+            </button>
+            <button
+            data-action="musicLareira"
+            class="ph ph-flame">
+                <span class="sr-only">Som de fogo em madeira</span>
+            </button>
+        </div>
+    </div>
+</body>
+</html>

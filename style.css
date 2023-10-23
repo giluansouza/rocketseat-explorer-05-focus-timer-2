@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --hue: 194;
+    --primary-color: #02799D;
+    --button-secondary: hsl(var(--hue), 40%, 98%);
+    --text-color: #323238;
+    --bg-color: hsl(var(--hue), 40%, 98%);
+    --controls-bg-color: #E1E1E6;
+    font-size: clamp(40%, 1% + 2vw, 62.5%);
+}
+
+#toggle-mode {
+    position: absolute;
+    right: 3.2rem;
+    top: 3.2rem;
+    font-size: 3.2rem;
+    line-height: 0;
+    color: var(--text-color);
+}
+
+.sr-only {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    overflow: hidden;
+    margin: -1px;
+    padding: 0px;
+    border: 0;
+    appearance: none;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+
+    display: grid;
+    height: 100vh;
+    place-content: center;
+}
+
+#app {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10rem;
+}
+
+.panel-timer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+}
+
+#timer {
+    font-size: 9.6rem;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+#controls {
+    margin-top: 1.6rem;
+    padding: 2.2rem 4rem;
+    gap: 1.6rem;
+    /* background-color: var(--controls-bg-color); */
+    /* border-radius: 999rem; */
+
+}
+
+button {
+    background-color: transparent;
+    border: 0;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 4rem;
+}
+
+.secondary {
+    color: var(--button-secondary);
+}
+
+.options-buttons {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.options-buttons > button {
+    background-color: var(--controls-bg-color);
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    color: var(--text-color)
+}
+
+.options-buttons > button:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+}
+
+/* controls */
+/* .running .ph-play-circle,
+.running .ph-timer,
+.music-on .ph-speaker-none,
+html:not(.running) .ph-pause-circle,
+html:not(.running) .ph-stop-circle,
+html:not(.music-on) .ph-speaker-high {
+    display: none;
+} */
+
